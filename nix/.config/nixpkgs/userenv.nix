@@ -5,7 +5,6 @@ in pkgs.buildEnv {
   name = "userenv";
 
   paths = with pkgs; [
-    chezmoi
     gh
     stow
     direnv
