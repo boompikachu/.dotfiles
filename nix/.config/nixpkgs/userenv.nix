@@ -19,6 +19,7 @@ in pkgs.buildEnv {
     tmux
     ripgrep
     fd
+    rustup
     (writeScriptBin "nix-env-update" ''
       #!${stdenv.shell}
       nix-env --install --file ~/.config/nixpkgs/userenv.nix
