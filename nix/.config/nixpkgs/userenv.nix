@@ -11,7 +11,6 @@ in pkgs.buildEnv {
     neovim
     git
     lazygit
-    neovim
     vimPlugins.vim-plug
     antigen
     starship
@@ -19,7 +18,11 @@ in pkgs.buildEnv {
     tmux
     ripgrep
     fd
+    fzf
+    bat
+    ripgrep
     rustup
+    nodePackages."@antfu/ni"
     (writeScriptBin "nix-env-update" ''
       #!${stdenv.shell}
       nix-env --install --file ~/.config/nixpkgs/userenv.nix
