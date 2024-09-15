@@ -1,10 +1,15 @@
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
+
+autoload -Uz +X compinit && compinit
+
+## case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
 # vim
 export EDITOR=nvim
-alias vim="nvim"
-alias vi="nvim"
 alias vimdiff='nvim -d'
 
 source ~/.nix-profile/share/antigen/antigen.zsh
